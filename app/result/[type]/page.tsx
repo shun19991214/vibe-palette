@@ -113,6 +113,47 @@ export default function ResultPage({ params }: Props) {
         </div>
       </div>
 
+      {/* Premium Report CTA */}
+      <section className="py-16 px-6 border-t border-neutral-800/50">
+        <div className="max-w-2xl mx-auto">
+          <div
+            className="rounded-3xl p-8 md:p-10 text-center"
+            style={{
+              background: `linear-gradient(135deg, ${c1.hex}20, ${c5.hex}15)`,
+              border: `1px solid ${c1.hex}40`,
+            }}
+          >
+            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-3">Premium</p>
+            <h2 className="font-serif text-2xl md:text-3xl text-white mb-3 italic">
+              詳細パーソナリティレポート
+            </h2>
+            <p className="text-neutral-400 text-sm mb-6 leading-relaxed max-w-md mx-auto">
+              本質的な性格・強みと弱み・恋愛スタイル・仕事での才能の発揮・
+              ライフスタイル提言・他タイプとの相性・成長メッセージを収録。
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center mb-8">
+              {["本質的な性格", "強み・弱み", "恋愛スタイル", "仕事・才能", "相性診断", "成長メッセージ"].map((item) => (
+                <span
+                  key={item}
+                  className="text-xs px-3 py-1 rounded-full border border-neutral-700 text-neutral-400"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
+              <Link
+                href={`/result/${aesthetic.id}/report`}
+                className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 text-neutral-950"
+                style={{ backgroundColor: c1.hex }}
+              >
+                レポートを読む →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Share section */}
       <section className="py-16 px-6 border-t border-neutral-800/50">
         <div className="max-w-2xl mx-auto flex flex-col items-center gap-10">
