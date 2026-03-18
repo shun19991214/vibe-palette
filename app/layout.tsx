@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "12の質問に答えて、あなただけのカラーパレットとAesthetic（審美世界観）を発見しよう。",
   metadataBase: new URL("https://vibe-palette-taupe.vercel.app"),
+  verification: {
+    google: "vITEJAZ7yHyz6c1xxxIy5VArDqxzKtG9XVo9W3gYAYc",
+  },
   openGraph: {
     title: "Vibe Palette — あなたの審美世界観を診断",
     description: "12の質問に答えて、あなただけのカラーパレットを発見しよう。",
