@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Vibe Palette — あなたの審美世界観を診断",
@@ -38,6 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-neutral-950 text-white antialiased">
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
