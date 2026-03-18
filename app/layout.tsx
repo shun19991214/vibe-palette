@@ -5,16 +5,20 @@ export const metadata: Metadata = {
   title: "Vibe Palette — あなたの審美世界観を診断",
   description:
     "12の質問に答えて、あなただけのカラーパレットとAesthetic（審美世界観）を発見しよう。",
+  metadataBase: new URL("https://vibe-palette-taupe.vercel.app"),
   openGraph: {
     title: "Vibe Palette — あなたの審美世界観を診断",
     description: "12の質問に答えて、あなただけのカラーパレットを発見しよう。",
     type: "website",
     locale: "ja_JP",
+    url: "https://vibe-palette-taupe.vercel.app",
+    siteName: "Vibe Palette",
   },
   twitter: {
     card: "summary_large_image",
     title: "Vibe Palette",
     description: "あなただけのカラーパレットとAestheticを診断",
+    site: "@vibepalette",
   },
 };
 
