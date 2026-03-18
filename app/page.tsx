@@ -12,7 +12,7 @@ export default function Home() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/5 rounded-full blur-2xl" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-2xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-8 w-full max-w-lg mx-auto">
         {/* Logo */}
         <div className="mb-8 flex items-center gap-3">
           <div className="flex gap-1">
@@ -38,7 +38,7 @@ export default function Home() {
           あなたの審美世界観を診断
         </p>
 
-        <p className="text-neutral-500 text-sm md:text-base mb-12 leading-relaxed max-w-md">
+        <p className="text-neutral-500 text-sm md:text-base mb-12 leading-relaxed w-full">
           12の質問に答えて、あなただけの
           <span className="text-neutral-300">カラーパレット</span>と
           <span className="text-neutral-300">Aesthetic</span>を発見しよう。
@@ -59,7 +59,7 @@ export default function Home() {
         <p className="mt-6 text-neutral-600 text-sm">所要時間 約3分 · 全12問</p>
 
         {/* Preview palette strip */}
-        <div className="mt-16 flex gap-1 opacity-30">
+        <div className="mt-16 flex flex-wrap justify-center gap-1 opacity-30 w-full">
           {[
             "#1a1410", "#c9a84c", "#f5f0e8", "#87a878", "#ff69b4",
             "#c0c0c0", "#0d1b2a", "#b57bee", "#39ff14", "#c1651a",
