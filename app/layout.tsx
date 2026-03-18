@@ -38,15 +38,15 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
           rel="stylesheet"
         />
-      </head>
-      <body className="min-h-screen bg-neutral-950 text-white antialiased">
-        <GoogleAnalytics />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7124944646519570"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
+      </head>
+      <body className="min-h-screen bg-neutral-950 text-white antialiased">
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
