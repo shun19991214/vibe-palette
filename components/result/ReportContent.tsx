@@ -7,6 +7,7 @@ import type { AestheticType, AestheticId } from "@/data/aesthetics";
 import { AESTHETICS } from "@/data/aesthetics";
 import type { DetailedReport } from "@/data/reports";
 import { ColorPalette } from "./ColorPalette";
+import { PurchaseButton } from "./PurchaseButton";
 
 interface ReportContentProps {
   aesthetic: AestheticType;
@@ -98,12 +99,12 @@ function ReportInner({ aesthetic, report }: ReportContentProps) {
                 本質的な性格・強みと弱み・恋愛・仕事・相性・成長メッセージを収録
               </p>
               <p className="text-white text-3xl font-bold mb-6">¥80</p>
-              <a
-                href="#purchase"
-                className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 text-neutral-950 bg-white hover:bg-neutral-100"
+              <PurchaseButton
+                typeId={aesthetic.id}
+                className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 text-neutral-950 bg-white hover:bg-neutral-100 cursor-pointer"
               >
                 購入してレポートを読む →
-              </a>
+              </PurchaseButton>
               <p className="text-neutral-500 text-xs mt-4">
                 Stripeによる安全な決済
               </p>

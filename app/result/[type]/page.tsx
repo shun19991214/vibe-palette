@@ -5,6 +5,7 @@ import { AESTHETICS, AESTHETIC_LIST, type AestheticId } from "@/data/aesthetics"
 import { ColorPalette } from "@/components/result/ColorPalette";
 import { ShareButtons } from "@/components/result/ShareButtons";
 import { ShareImageCard } from "@/components/result/ShareImageCard";
+import { PurchaseButton } from "@/components/result/PurchaseButton";
 
 interface Props {
   params: { type: string };
@@ -141,15 +142,17 @@ export default function ResultPage({ params }: Props) {
                 </span>
               ))}
             </div>
+            <p className="text-white text-2xl font-bold mb-6">¥80</p>
             <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-              <Link
-                href={`/result/${aesthetic.id}/report`}
-                className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 text-neutral-950"
+              <PurchaseButton
+                typeId={aesthetic.id}
+                className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 text-neutral-950 cursor-pointer"
                 style={{ backgroundColor: c1.hex }}
               >
-                レポートを読む →
-              </Link>
+                購入してレポートを読む →
+              </PurchaseButton>
             </div>
+            <p className="text-neutral-500 text-xs mt-4">Stripeによる安全な決済</p>
           </div>
         </div>
       </section>
