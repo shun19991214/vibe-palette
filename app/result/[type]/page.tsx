@@ -173,7 +173,7 @@ export default function ResultPage({ params }: Props) {
           <ShareImageCard aesthetic={aesthetic} />
 
           {/* SNS share buttons */}
-          <ShareButtons typeId={aesthetic.id} shareText={aesthetic.shareText} />
+          <ShareButtons typeId={aesthetic.id} shareText={aesthetic.shareText} nameJa={aesthetic.nameJa} />
         </div>
       </section>
 

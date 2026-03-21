@@ -3,16 +3,20 @@
 interface ShareButtonsProps {
   typeId: string;
   shareText: string;
+  nameJa: string;
 }
 
-export function ShareButtons({ typeId, shareText }: ShareButtonsProps) {
+export function ShareButtons({ typeId, shareText, nameJa }: ShareButtonsProps) {
   const url =
     typeof window !== "undefined"
       ? `${window.location.origin}/result/${typeId}`
-      : `https://vibepalette.vercel.app/result/${typeId}`;
+      : `https://vibe-palette-taupe.vercel.app/result/${typeId}`;
+
+  const typeTag = nameJa.replace(/[・\s]/g, "");
+  const fullShareText = `${shareText}\n\nあなたのVibeは何色？全16タイプ\n#VibePalette診断 #${typeTag}`;
 
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-    shareText + "\n#VibePalette #審美診断"
+    fullShareText
   )}&url=${encodeURIComponent(url)}`;
 
   const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`;
@@ -46,7 +50,7 @@ export function ShareButtons({ typeId, shareText }: ShareButtonsProps) {
       <button
         onClick={() => {
           if (navigator.share) {
-            navigator.share({ title: "Vibe Palette", text: shareText, url });
+            navigator.share({ title: "Vibe Palette", text: fullShareText, url });
           } else {
             navigator.clipboard.writeText(url);
           }

@@ -117,29 +117,23 @@ export default function OGImage({ params }: { params: { type: string } }) {
           ))}
         </div>
 
-        {/* Hex codes */}
-        <div style={{ display: "flex", gap: 20, marginTop: 16 }}>
-          {aesthetic.palette.map((c) => (
-            <div
-              key={c.hex}
-              style={{ fontSize: 14, color: "#525252", fontFamily: "monospace" }}
-            >
-              {c.hex}
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom URL */}
+        {/* Bottom CTA */}
         <div
           style={{
             position: "absolute",
             bottom: 36,
-            fontSize: 18,
-            color: "#404040",
-            letterSpacing: "0.1em",
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            padding: "0 60px",
           }}
         >
-          vibe-palette-taupe.vercel.app
+          <div style={{ fontSize: 18, color: "#737373" }}>
+            あなたのVibeは何色？ 全16タイプ
+          </div>
+          <div style={{ fontSize: 18, color: "#525252", letterSpacing: "0.1em" }}>
+            vibe-palette-taupe.vercel.app
+          </div>
         </div>
       </div>
     ),

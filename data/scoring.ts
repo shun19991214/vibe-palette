@@ -32,11 +32,6 @@ const MAPPINGS: AestheticMapping[] = [
     weight: { darkLight: 1, naturalArtificial: 2, pastFuture: 1, quietBold: 3 },
   },
   {
-    id: "solarpunk",
-    ideal: { darkLight: 8, naturalArtificial: -8, pastFuture: 8, quietBold: 4 },
-    weight: { darkLight: 1, naturalArtificial: 2, pastFuture: 2, quietBold: 1 },
-  },
-  {
     id: "midnight-luxe",
     ideal: { darkLight: -12, naturalArtificial: 4, pastFuture: -4, quietBold: 2 },
     weight: { darkLight: 3, naturalArtificial: 1, pastFuture: 1, quietBold: 1 },
@@ -52,19 +47,9 @@ const MAPPINGS: AestheticMapping[] = [
     weight: { darkLight: 2, naturalArtificial: 3, pastFuture: 1, quietBold: 2 },
   },
   {
-    id: "coastal-grandmother",
-    ideal: { darkLight: 12, naturalArtificial: -6, pastFuture: -4, quietBold: -6 },
-    weight: { darkLight: 2, naturalArtificial: 2, pastFuture: 1, quietBold: 2 },
-  },
-  {
     id: "fairycore",
     ideal: { darkLight: 4, naturalArtificial: -10, pastFuture: -6, quietBold: -4 },
     weight: { darkLight: 1, naturalArtificial: 2, pastFuture: 1, quietBold: 1 },
-  },
-  {
-    id: "industrial-minimalist",
-    ideal: { darkLight: -6, naturalArtificial: 8, pastFuture: 0, quietBold: -12 },
-    weight: { darkLight: 1, naturalArtificial: 2, pastFuture: 1, quietBold: 3 },
   },
   {
     id: "barbiecore",
@@ -92,9 +77,24 @@ const MAPPINGS: AestheticMapping[] = [
     weight: { darkLight: 3, naturalArtificial: 1, pastFuture: 1, quietBold: 2 },
   },
   {
-    id: "nomad-earth",
-    ideal: { darkLight: 6, naturalArtificial: -8, pastFuture: 0, quietBold: 2 },
-    weight: { darkLight: 1, naturalArtificial: 2, pastFuture: 1, quietBold: 1 },
+    id: "coquette",
+    ideal: { darkLight: 10, naturalArtificial: -2, pastFuture: -4, quietBold: 6 },
+    weight: { darkLight: 2, naturalArtificial: 1, pastFuture: 1, quietBold: 2 },
+  },
+  {
+    id: "clean-girl",
+    ideal: { darkLight: 8, naturalArtificial: 4, pastFuture: 2, quietBold: -8 },
+    weight: { darkLight: 1, naturalArtificial: 1, pastFuture: 1, quietBold: 3 },
+  },
+  {
+    id: "neo-mori",
+    ideal: { darkLight: 4, naturalArtificial: -14, pastFuture: -6, quietBold: -8 },
+    weight: { darkLight: 1, naturalArtificial: 3, pastFuture: 1, quietBold: 2 },
+  },
+  {
+    id: "old-money",
+    ideal: { darkLight: 2, naturalArtificial: 2, pastFuture: -8, quietBold: -12 },
+    weight: { darkLight: 1, naturalArtificial: 1, pastFuture: 2, quietBold: 3 },
   },
 ];
 
