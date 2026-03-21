@@ -12,16 +12,6 @@ const INITIAL_SCORES: AxisScores = {
   quietBold: 0,
 };
 
-export interface QuizState {
-  currentIndex: number;
-  answers: Record<number, string>;
-  scores: AxisScores;
-  isComplete: boolean;
-  result: AestheticId | null;
-  topThree: AestheticId[];
-  progress: number;
-}
-
 export function useQuiz() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -30,6 +20,7 @@ export function useQuiz() {
   const totalQuestions = QUESTIONS.length;
   const isComplete = currentIndex >= totalQuestions;
   const progress = Math.round((currentIndex / totalQuestions) * 100);
+  const canGoBack = currentIndex > 0 && !isComplete;
 
   const result: AestheticId | null = isComplete ? calculateResult(scores) : null;
   const topThree: AestheticId[] = isComplete ? getTopThree(scores) : [];
@@ -54,6 +45,36 @@ export function useQuiz() {
     [currentIndex]
   );
 
+  const goBack = useCallback(() => {
+    if (currentIndex <= 0) return;
+
+    const prevIndex = currentIndex - 1;
+    const prevQuestion = QUESTIONS[prevIndex];
+    if (!prevQuestion) return;
+
+    const prevChoiceId = answers[prevQuestion.id];
+    if (prevChoiceId) {
+      const prevChoice = prevQuestion.choices.find((c) => c.id === prevChoiceId);
+      if (prevChoice) {
+        // Subtract the previous answer's scores
+        setScores((prev) => ({
+          darkLight: prev.darkLight - prevChoice.scores.darkLight,
+          naturalArtificial: prev.naturalArtificial - prevChoice.scores.naturalArtificial,
+          pastFuture: prev.pastFuture - prevChoice.scores.pastFuture,
+          quietBold: prev.quietBold - prevChoice.scores.quietBold,
+        }));
+      }
+      // Remove the answer
+      setAnswers((prev) => {
+        const next = { ...prev };
+        delete next[prevQuestion.id];
+        return next;
+      });
+    }
+
+    setCurrentIndex(prevIndex);
+  }, [currentIndex, answers]);
+
   const reset = useCallback(() => {
     setCurrentIndex(0);
     setAnswers({});
@@ -71,6 +92,8 @@ export function useQuiz() {
     progress,
     totalQuestions,
     answer,
+    goBack,
+    canGoBack,
     reset,
   };
 }

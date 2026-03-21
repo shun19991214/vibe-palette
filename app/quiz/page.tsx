@@ -17,6 +17,8 @@ export default function QuizPage() {
     progress,
     totalQuestions,
     answer,
+    goBack,
+    canGoBack,
   } = useQuiz();
 
   useEffect(() => {
@@ -27,9 +29,9 @@ export default function QuizPage() {
 
   if (isComplete) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-neutral-950">
+      <main className="min-h-screen flex items-center justify-center bg-[#050508]">
         <div className="text-center animate-fade-in">
-          <div className="text-4xl mb-4">✨</div>
+          <div className="text-5xl mb-4 animate-float">✨</div>
           <p className="text-neutral-400">結果を計算中...</p>
         </div>
       </main>
@@ -37,18 +39,23 @@ export default function QuizPage() {
   }
 
   return (
-    <main className="min-h-screen bg-neutral-950 flex flex-col">
+    <main className="min-h-screen bg-[#050508] flex flex-col">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-5 max-w-2xl mx-auto w-full">
-        <Link
-          href="/"
-          className="text-neutral-500 hover:text-neutral-300 text-sm transition-colors flex items-center gap-1"
+        <button
+          onClick={canGoBack ? goBack : undefined}
+          disabled={!canGoBack}
+          className={`text-sm transition-colors flex items-center gap-1 ${
+            canGoBack
+              ? "text-neutral-400 hover:text-white cursor-pointer"
+              : "text-neutral-700 cursor-not-allowed"
+          }`}
         >
-          ← 戻る
-        </Link>
-        <span className="font-serif text-neutral-300 text-sm font-medium italic">
+          ← 前の質問
+        </button>
+        <Link href="/" className="font-serif text-neutral-300 text-sm font-medium italic">
           Vibe Palette
-        </span>
+        </Link>
       </header>
 
       {/* Progress */}
