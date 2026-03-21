@@ -53,7 +53,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "ダーク・アカデミアでした📚 深夜の図書館が一番落ち着く人間です",
-    celebrities: ["Emma Watson", "Timothée Chalamet", "Lana Del Rey"],
+    celebrities: ["紫式部", "シェイクスピア", "ゲーテ"],
     keywords: ["古書", "図書館", "蝋燭", "詩", "哲学", "ツイード"],
     emoji: "📚",
   },
@@ -74,7 +74,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "コテージコアでした🌿 理想の休日は庭でジャム作り",
-    celebrities: ["Taylor Swift", "Florence Pugh", "Billie Eilish (初期)"],
+    celebrities: ["ターシャ・テューダー", "ビアトリクス・ポター", "ルソー"],
     keywords: ["野花", "手作りパン", "ガーデン", "リネン", "ピクニック", "陶器"],
     emoji: "🌿",
   },
@@ -95,7 +95,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "Y2Kサイバーでした💿 ガラケー時代の未来感が正義",
-    celebrities: ["Paris Hilton", "Dua Lipa", "Kim Petras"],
+    celebrities: ["クレオパトラ", "楊貴妃", "マリー・アントワネット"],
     keywords: ["クロップトップ", "バタフライ", "ハート型", "メタリック", "バブルレタリング"],
     emoji: "💿",
   },
@@ -116,7 +116,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "コケットでした🎀 リボンとレース、計算された可愛さが私の武器",
-    celebrities: ["Ariana Grande", "Jennie (BLACKPINK)", "Brigitte Bardot"],
+    celebrities: ["ポンパドゥール夫人", "小野小町", "エリザベート皇妃"],
     keywords: ["リボン", "レース", "フリル", "あざと可愛い", "ピンク", "パール"],
     emoji: "🎀",
   },
@@ -137,7 +137,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "ミッドナイト・グラムでした🥂 深夜のシャンパンが似合う人間です",
-    celebrities: ["Cate Blanchett", "Jay-Z", "Adele"],
+    celebrities: ["ココ・シャネル", "カサノヴァ", "光源氏"],
     keywords: ["シャンパン", "ベルベット", "ジャズ", "深夜", "シルク", "高級感"],
     emoji: "🥂",
   },
@@ -158,7 +158,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "侘び寂びでした🍂 欠けた茶碗に美を見つけるタイプ",
-    celebrities: ["Issey Miyake", "Leonard Cohen", "Wim Wenders"],
+    celebrities: ["千利休", "良寛", "松尾芭蕉"],
     keywords: ["陶器", "苔", "余白", "不完全", "木目", "侘び"],
     emoji: "🍂",
   },
@@ -179,7 +179,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "サイバーネオンでした⚡ 雨のネオン街が最高に映える",
-    celebrities: ["Grimes", "Aphex Twin", "Yolandi Visser"],
+    celebrities: ["ニコラ・テスラ", "アラン・チューリング", "フィリップ・K・ディック"],
     keywords: ["サイバーパンク", "ネオン", "グリッチ", "ハッキング", "廃墟"],
     emoji: "⚡",
   },
@@ -200,7 +200,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "クリーンガールでした✨ 引き算の美学、素肌のツヤが最強",
-    celebrities: ["Hailey Bieber", "Zendaya", "Kōki"],
+    celebrities: ["ネフェルティティ", "ダイアナ妃", "グレース・ケリー"],
     keywords: ["ツヤ肌", "スリックバック", "ミニマル", "抜け感", "清潔感", "ヘルシー"],
     emoji: "✨",
   },
@@ -221,7 +221,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "フェアリーコアでした🧚 日常に小さな魔法を見つける天才",
-    celebrities: ["Aurora (singer)", "Björk", "Simone Rocha"],
+    celebrities: ["アルテミス（女神）", "ティターニア（妖精女王）", "かぐや姫"],
     keywords: ["妖精", "露", "キノコ", "月光", "蝶", "幻想的"],
     emoji: "🧚",
   },
@@ -242,7 +242,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "ネオ森ガールでした🌿 木漏れ日とリネン、五感で生きる人",
-    celebrities: ["蒼井優", "Saoirse Ronan", "新垣結衣"],
+    celebrities: ["ジョン・ミューア", "ワーズワース", "与謝野晶子"],
     keywords: ["リネン", "木漏れ日", "森", "ナチュラル", "手作り", "お散歩"],
     emoji: "🍃",
   },
@@ -263,7 +263,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "バービーコアでした💖 ピンクは自己愛の色、全力で自分を祝う",
-    celebrities: ["Margot Robbie", "Nicki Minaj", "Cardi B"],
+    celebrities: ["マリリン・モンロー", "カルメン・ミランダ", "出雲阿国"],
     keywords: ["ホットピンク", "グリッター", "自己愛", "フェミニン", "パワー"],
     emoji: "💖",
   },
@@ -284,7 +284,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "森の魔女でした🌙 月の満ち欠けで生きるタイプです",
-    celebrities: ["Stevie Nicks", "Florence Welch", "Phoebe Bridgers"],
+    celebrities: ["安倍晴明", "モルガン・ル・フェイ", "卑弥呼"],
     keywords: ["月", "ハーブ", "水晶", "森", "タロット", "神秘"],
     emoji: "🌙",
   },
@@ -305,7 +305,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "ネオレトロでした🚀 60年代が夢見た未来に住みたい",
-    celebrities: ["David Bowie", "Bruno Mars", "Pharrell Williams"],
+    celebrities: ["レオナルド・ダ・ヴィンチ", "ジュール・ヴェルヌ", "手塚治虫"],
     keywords: ["スペースエイジ", "カセット", "レトロ", "宇宙", "未来", "60年代"],
     emoji: "🚀",
   },
@@ -326,7 +326,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "静かな贅沢でした🤍 ロゴなし、素材で語る派",
-    celebrities: ["Sofia Coppola", "The Row (designers)", "Gwyneth Paltrow"],
+    celebrities: ["オードリー・ヘプバーン", "白洲正子", "吉田茂"],
     keywords: ["カシミア", "リネン", "オールドマネー", "品格", "素材", "静寂"],
     emoji: "🤍",
   },
@@ -347,7 +347,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "ゆめかわでした🍭 かわいいは正義、それが生き方",
-    celebrities: ["Kyary Pamyu Pamyu", "Ariana Grande", "Melanie Martinez"],
+    celebrities: ["不思議の国のアリス", "マリア・テレジア（少女時代）", "乙姫"],
     keywords: ["パステル", "ふわふわ", "うさぎ", "マカロン", "ハート", "もこもこ"],
     emoji: "🍭",
   },
@@ -368,7 +368,7 @@ export const AESTHETICS: Record<AestheticId, AestheticType> = {
     ],
     shareText:
       "オールドマネーでした🏛️ ロゴなし、品格で語る",
-    celebrities: ["Old Money TikTok", "Grace Kelly", "Kennedy家"],
+    celebrities: ["徳川家康", "ロスチャイルド家", "ヴィクトリア女王"],
     keywords: ["カシミア", "ネイビー", "品格", "教養", "オールドマネー", "ヘリテージ"],
     emoji: "🏛️",
   },
