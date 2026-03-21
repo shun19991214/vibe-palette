@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
@@ -47,9 +48,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen bg-neutral-950 text-white antialiased">
+      <body className="min-h-screen bg-neutral-950 text-white antialiased flex flex-col">
         <GoogleAnalytics />
-        {children}
+        <div className="flex-1">{children}</div>
+        <footer className="border-t border-neutral-800 py-8 px-6">
+          <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+            <span>© 2026 Vibe Palette</span>
+            <nav className="flex gap-4">
+              <Link href="/legal/privacy" className="hover:text-neutral-300 transition-colors">プライバシーポリシー</Link>
+              <Link href="/legal/terms" className="hover:text-neutral-300 transition-colors">利用規約</Link>
+              <Link href="/legal/commercial" className="hover:text-neutral-300 transition-colors">特定商取引法</Link>
+            </nav>
+          </div>
+        </footer>
       </body>
     </html>
   );
