@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 py-16 px-6">
+    <main className="min-h-screen bg-[#050508] py-16 px-6">
       {/* Header */}
       <div className="max-w-4xl mx-auto mb-14 text-center">
         <Link
           href="/"
-          className="inline-block text-neutral-500 hover:text-neutral-300 text-sm mb-8 transition-colors"
+          className="inline-block glass px-4 py-1.5 rounded-full text-neutral-500 hover:text-neutral-300 text-sm mb-8 transition-all"
         >
           ← ホーム
         </Link>
@@ -28,7 +28,7 @@ export default function GalleryPage() {
 
         <Link
           href="/quiz"
-          className="mt-8 inline-flex items-center gap-2 bg-white text-neutral-950 font-semibold px-8 py-3 rounded-full hover:bg-neutral-100 transition-all hover:scale-105"
+          className="mt-8 inline-flex items-center gap-2 bg-white text-neutral-950 font-semibold px-8 py-3 rounded-full hover:bg-neutral-100 transition-all hover:scale-105 shadow-lg shadow-white/5"
         >
           今すぐ診断する →
         </Link>
@@ -36,15 +36,16 @@ export default function GalleryPage() {
 
       {/* Grid */}
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {AESTHETIC_LIST.map((aesthetic) => {
-          const [c1, , c5] = aesthetic.palette;
+        {AESTHETIC_LIST.map((aesthetic, idx) => {
+          const [c1, , , , c5] = aesthetic.palette;
           return (
             <Link
               key={aesthetic.id}
               href={`/result/${aesthetic.id}`}
-              className="group relative rounded-3xl border border-neutral-800 overflow-hidden transition-all duration-300 hover:border-neutral-600 hover:scale-[1.02]"
+              className="group relative rounded-3xl glass overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
               style={{
-                background: `radial-gradient(ellipse at top left, ${c1.hex}25 0%, transparent 60%), radial-gradient(ellipse at bottom right, ${c5.hex}15 0%, transparent 50%), #0f0f0f`,
+                background: `radial-gradient(ellipse at top left, ${c1.hex}20 0%, transparent 60%), radial-gradient(ellipse at bottom right, ${c5.hex}12 0%, transparent 50%), rgba(255,255,255,0.04)`,
+                animationDelay: `${idx * 0.03}s`,
               }}
             >
               {/* Palette accent bar */}
@@ -55,10 +56,9 @@ export default function GalleryPage() {
               </div>
 
               <div className="p-5">
-                {/* Emoji + name */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <p className="text-xs text-neutral-600 uppercase tracking-widest mb-1">
+                    <p className="text-[10px] text-neutral-600 uppercase tracking-widest mb-1">
                       {aesthetic.name}
                     </p>
                     <h2 className="font-serif text-xl text-white font-medium italic">
@@ -68,15 +68,15 @@ export default function GalleryPage() {
                       {aesthetic.subMoodJa}
                     </p>
                   </div>
-                  <span className="text-3xl">{aesthetic.emoji}</span>
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                    {aesthetic.emoji}
+                  </span>
                 </div>
 
-                {/* Palette swatches */}
                 <ColorPalette palette={aesthetic.palette} />
 
-                {/* Arrow on hover */}
                 <div className="mt-4 flex justify-end">
-                  <span className="text-neutral-600 text-sm transition-all duration-200 group-hover:text-neutral-300 group-hover:translate-x-1">
+                  <span className="text-neutral-600 text-sm transition-all duration-300 group-hover:text-neutral-300 group-hover:translate-x-1">
                     詳細を見る →
                   </span>
                 </div>
