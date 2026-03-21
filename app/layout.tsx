@@ -51,14 +51,31 @@ export default function RootLayout({
       <body className="min-h-screen bg-neutral-950 text-white antialiased flex flex-col">
         <GoogleAnalytics />
         <div className="flex-1">{children}</div>
-        <footer className="border-t border-neutral-800 py-8 px-6">
-          <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-            <span>© 2026 Vibe Palette</span>
-            <nav className="flex gap-4">
-              <Link href="/legal/privacy" className="hover:text-neutral-300 transition-colors">プライバシーポリシー</Link>
-              <Link href="/legal/terms" className="hover:text-neutral-300 transition-colors">利用規約</Link>
-              <Link href="/legal/commercial" className="hover:text-neutral-300 transition-colors">特定商取引法</Link>
-            </nav>
+        <footer className="border-t border-neutral-800 py-10 px-6">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-neutral-500">
+              <div>
+                <h3 className="text-neutral-300 font-semibold mb-2">Vibe Palette</h3>
+                <p className="leading-relaxed">
+                  12の質問に答えて、あなただけのカラーパレットと審美世界観（Aesthetic）を診断するサービスです。無料診断のほか、詳細パーソナリティレポート（¥80）を提供しています。
+                </p>
+              </div>
+              <div>
+                <h3 className="text-neutral-300 font-semibold mb-2">お問い合わせ</h3>
+                <p>vibe.palette.app@gmail.com</p>
+              </div>
+              <div>
+                <h3 className="text-neutral-300 font-semibold mb-2">ポリシー</h3>
+                <nav className="flex flex-col gap-1">
+                  <Link href="/legal/privacy" className="hover:text-neutral-300 transition-colors">プライバシーポリシー</Link>
+                  <Link href="/legal/terms" className="hover:text-neutral-300 transition-colors">利用規約</Link>
+                  <Link href="/legal/commercial" className="hover:text-neutral-300 transition-colors">特定商取引法に基づく表記</Link>
+                </nav>
+              </div>
+            </div>
+            <div className="text-center text-xs text-neutral-600 pt-4 border-t border-neutral-800">
+              © 2026 Vibe Palette. All rights reserved.
+            </div>
           </div>
         </footer>
       </body>
