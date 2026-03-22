@@ -14,104 +14,77 @@ export default function CommercialDisclosure() {
         </Link>
         <h1 className="text-3xl font-bold text-white mb-8">特定商取引法に基づく表記</h1>
 
-        <div className="space-y-6 text-sm leading-relaxed">
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">販売業者</span>
-            <span>個人事業（Vibe Palette 運営）</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">運営責任者</span>
-            <span>請求があった場合に遅滞なく開示いたします</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">所在地</span>
-            <span>請求があった場合に遅滞なく開示いたします</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">電話番号</span>
-            <span>請求があった場合に遅滞なく開示いたします</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">メールアドレス</span>
-            <span>vibe.palette.app@gmail.com</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">販売URL</span>
-            <span>https://vibe-palette-taupe.vercel.app</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">商品名</span>
-            <span>Vibe Palette 詳細パーソナリティレポート</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">商品の説明</span>
-            <span>
-              審美世界観（Aesthetic）診断の結果に基づく詳細なパーソナリティレポートです。
-              本質的な性格分析、強みと弱み、恋愛スタイル、仕事での才能の活かし方、
-              ライフスタイルの提言、他タイプとの相性診断、成長メッセージを含むデジタルコンテンツです。
-              診断結果ページからオンラインで閲覧できます。
-            </span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">販売価格</span>
-            <span>¥80（税込）</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">商品代金以外の費用</span>
-            <span>なし（通信料等はお客様のご負担となります）</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">支払方法</span>
-            <span>クレジットカード（Visa, Mastercard, American Express, JCB）※ Stripe株式会社の決済システムを利用</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">支払時期</span>
-            <span>商品購入時に即時決済されます</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">商品の引き渡し時期</span>
-            <span>決済完了後、即時にデジタルコンテンツへのアクセスが可能となります</span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">返品・返金ポリシー</span>
-            <span>
-              デジタルコンテンツの性質上、購入後の返品・返金は原則としてお受けしておりません。
-              ただし、以下の場合は返金に応じます。
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>商品に重大な不備（コンテンツが表示されない等）があった場合</li>
-                <li>二重決済が発生した場合</li>
-                <li>その他、当方の責に帰すべき事由がある場合</li>
-              </ul>
-              <p className="mt-2">返金のご請求は、購入後7日以内に vibe.palette.app@gmail.com までご連絡ください。</p>
-            </span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 border-b border-neutral-800 pb-4">
-            <span className="text-neutral-500">キャンセルについて</span>
-            <span>
-              デジタルコンテンツの即時提供という性質上、決済完了後のキャンセルはお受けしておりません。
-              購入前に商品内容を十分ご確認の上、ご購入ください。
-            </span>
-          </div>
-
-          <div className="grid grid-cols-[160px_1fr] gap-4 pb-4">
-            <span className="text-neutral-500">動作環境</span>
-            <span>最新バージョンの Chrome、Safari、Firefox、Edge に対応したウェブブラウザ。インターネット接続環境が必要です。</span>
-          </div>
-        </div>
+        <table className="w-full text-sm leading-relaxed border-collapse">
+          <tbody>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 w-[160px] align-top font-normal">販売業者</th>
+              <td className="py-4">請求があった場合は遅滞なく開示いたします</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">運営責任者</th>
+              <td className="py-4">請求があった場合は遅滞なく開示いたします</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">所在地</th>
+              <td className="py-4">請求があった場合は遅滞なく開示いたします</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">電話番号</th>
+              <td className="py-4">請求があった場合は遅滞なく開示いたします</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">メールアドレス</th>
+              <td className="py-4">vibe.palette.app@gmail.com</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">販売URL</th>
+              <td className="py-4">https://vibe-palette-taupe.vercel.app</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">販売価格</th>
+              <td className="py-4">
+                Vibe Palette 詳細パーソナリティレポート: ¥80（税込）<br />
+                ※ 各商品の価格は購入ページにも記載しています
+              </td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">商品代金以外の必要料金</th>
+              <td className="py-4">なし（インターネット接続に必要な通信料はお客様のご負担となります）</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">お支払い方法</th>
+              <td className="py-4">クレジットカード（Visa、Mastercard、American Express、JCB）<br />※ 決済処理は Stripe 株式会社のシステムを利用しています</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">お支払い時期</th>
+              <td className="py-4">クレジットカード決済は購入時にただちに処理されます</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">商品の引き渡し時期</th>
+              <td className="py-4">決済完了後、即時にデジタルコンテンツへのアクセスが可能となります</td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">返品・交換について</th>
+              <td className="py-4">
+                <p className="font-semibold text-neutral-200 mb-2">＜お客様都合による返品・交換＞</p>
+                <p className="mb-3">
+                  デジタルコンテンツという商品の性質上、購入後の返品・交換はお受けしておりません。
+                  購入前に商品内容を十分にご確認の上、ご購入ください。
+                </p>
+                <p className="font-semibold text-neutral-200 mb-2">＜不良品・サービス不備の場合＞</p>
+                <p>
+                  コンテンツが正常に表示されない、二重決済が発生した等の不備があった場合は、
+                  購入後7日以内に vibe.palette.app@gmail.com までご連絡ください。
+                  状況を確認の上、全額返金にて対応いたします。
+                </p>
+              </td>
+            </tr>
+            <tr className="border-b border-neutral-800">
+              <th className="text-left text-neutral-500 py-4 pr-4 align-top font-normal">動作環境</th>
+              <td className="py-4">最新バージョンの Chrome、Safari、Firefox、Edge に対応したウェブブラウザ。インターネット接続環境が必要です。</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
   );
